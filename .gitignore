@@ -1,6 +1,11 @@
-.project
-.cproject
 .settings/
+core/
+libraries/
 Release/
+.cproject
+.project
+
 /.ino.cpp
 .vscode
+
+
