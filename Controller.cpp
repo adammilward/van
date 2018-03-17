@@ -4,11 +4,11 @@
  *  Created on: 20 Feb 2017
  *      Author: Adam Milward
  */
-#define STAT
-#include "StatusCtr.h"
-//#define LTS
+//#define STAT
+//#include "StatusCtr.h"
+#define LTS
+#include "LightCtr.h"
 //#define IR
-//#include "LightCtr.h"
 
 
 #include "Controller.h"

@@ -2,24 +2,23 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2018-02-05 21:56:51
+//This file has been generated on 2018-02-11 19:22:51
 
 #include "Arduino.h"
 #include <Arduino.h>
 #include <stdlib.h>
 #include "Controller.h"
 #include "Gbl.h"
+#include "LightCtr.h"
 extern Controller masterCtr;
-#define TM
-#include <DS3231.h>
-extern DS3231 rtc;
-extern Time alarm;
+extern Light Red;
+extern Light Green;
+extern Light Blue;
 
 void setup() ;
 void loop() ;
-void timeBits() ;
 
-#include "clockTest.ino"
+#include "van.ino"
 
 
 #endif

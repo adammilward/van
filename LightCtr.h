@@ -23,9 +23,9 @@ public:
 
 
 
-    static Light Red;
-    static Light Green;
-    static Light Blue;
+    static Light *red;
+    static Light *green;
+    static Light *blue;
 
     enum controllerMode { STATIC, FADE };
     controllerMode ctrMode = controllerMode::STATIC;

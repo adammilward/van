@@ -7,12 +7,12 @@
 
 #include "timeCtr.h"
 
-timeCtr::timeCtr() {
+TimeCtr::TimeCtr() {
 	// TODO Auto-generated constructor stub
 
 }
 
-timeCtr::~timeCtr() {
+TimeCtr::~TimeCtr() {
 	// TODO Auto-generated destructor stub
 }
 

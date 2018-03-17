@@ -41,9 +41,19 @@
 #include <stdlib.h>
 #include "Controller.h"
 #include "Gbl.h"
+#include "LightCtr.h"
 
 Controller masterCtr;      // handles the remotes
 Stream *Gbl::strPtr = &Serial;
+
+
+Light Red(Gbl::RED_PIN, 0);
+Light Green(Gbl::GREEN_PIN, 1);
+Light Blue(Gbl::BLUE_PIN, 2);
+
+Light *LightCtr::red = &Red;
+Light *LightCtr::green = &Green;
+Light *LightCtr::blue = &Blue;
 
 //#define BTUNO
 #ifdef BTUNO
@@ -51,7 +61,7 @@ Stream *Gbl::strPtr = &Serial;
 	SoftwareSerial BT = SoftwareSerial(12, 13); // RX,TX
 #endif
 
-#define TM
+//#define TM
 #ifdef TM
 #include <DS3231.h>
 // Init the DS3231 using the hardware interface
@@ -72,7 +82,7 @@ void setup()
   // Setup Serial connection
   Serial.begin(115200);
 #ifdef BTUNO
-  BT.begin(9600);
+  BT.begin(115200);
 #endif
 #ifdef IR
   irrecv.enableIRIn();
@@ -98,7 +108,7 @@ void setup()
 void loop()
 {
 	// run the timer
-	masterCtr.timer(millis());
+	//masterCtr.timer(millis());
 
 	// run Serial commands
     while (Serial.available()) {
@@ -124,7 +134,7 @@ void loop()
 }
 
 
-void timeBits() {
+/*void timeBits() {
   // Send Day-of-Week
   Serial.print(rtc.getDOWStr());
   Serial.print(" ");
@@ -170,4 +180,4 @@ void timeBits() {
   Serial.println(rtc.getTimeStr(alarm));
 
   delay (5000);
-}
+}*/

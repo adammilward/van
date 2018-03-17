@@ -8,10 +8,10 @@
 #ifndef TIMECTR_H_
 #define TIMECTR_H_
 
-class timeCtr {
+class TimeCtr {
 public:
-	timeCtr();
-	virtual ~timeCtr();
+	TimeCtr();
+	virtual ~TimeCtr();
 };
 
 #endif /* TIMECTR_H_ */

@@ -22,13 +22,10 @@ public:
 
     static bool isNum(char* wordAr);
 
-#ifdef LIGHS
-    LightCtr lightCtr;
-#endif
 private:
 
 
-    StatusCtr statusCtr;
+    //StatusCtr statusCtr;
     LightCtr lightCtr;
 
     enum IRMode {IR_LIGHTS, IR_MP3};
